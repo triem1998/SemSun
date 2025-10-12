@@ -1,5 +1,5 @@
 # Semi-blind Spectral unmixing based on manifold learning (SemSun)
-This is the code for spectral unmixing in gamma-ray spectrometry with spectral deformation.
+This is the code for spectral unmixing in gamma-ray spectrometry with spectral variability.
 The gamma-ray spectrum can be deformed by physical phenomena such as attenuation, the Compton scattering and fluorescence. The database used in this article contains different characteristic spectra for each radionuclide (called spectral signatures) based on different thicknesses of a steel sphere.
 As the thickness varies, the spectral signatures of all radionuclides are deformed. For example, the figure below shows the spectral signature of <sup>133</sup>Ba as a function of thickness.
 ![ ](illustrations/spectre_Ba133.png)
@@ -17,4 +17,8 @@ The code is organized as follows:
       - The Models folder contains the pre-trained IAE model.
       - The Data folder contains the results of the evaluation of 1000 Monte Carlo simulations for the hybrid algorithm.
 ## Package requirements
-The codes are implemented using Pytorch. Please follow this link to install it correctly: [Pytorch (Cuda or CPU)](https://pytorch.org/get-started/locally/)
+SemSun was coded using Pytorch. To use SemSun, you will need the packages listed in environment.yml. To create and activate a conda environment with all the imports needed, do (with CPU):
+-  conda env create -f environment.yml
+-  conda activate pytorch
+  
+If there is a problem with the installation of Pytorch, please follow this link to install it correctly: [Pytorch](https://pytorch.org/get-started/locally/).
